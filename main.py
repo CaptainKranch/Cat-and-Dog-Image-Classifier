@@ -43,7 +43,7 @@ val_data_gen = validation_image_generator.flow_from_directory(
                     batch_size=batch_size,
                     class_mode='binary')
 test_data_gen = test_image_generator.flow_from_directory(
-                    test_dir,
+                    PATH,
                     target_size=(IMG_HEIGHT, IMG_WIDTH),
                     batch_size=batch_size,
                     classes=['test'],
@@ -143,3 +143,4 @@ probabilities = model.predict(test_data_gen).flatten()
 probabilities
 
 # https://github.com/a-mt/fcc-cat-dog/blob/main/fcc_cat_dog.ipynb
+# https://colab.research.google.com/github/freeCodeCamp/boilerplate-cat-and-dog-image-classifier/blob/master/fcc_cat_dog.ipynb#scrollTo=4IH86Ux_u7TZ
